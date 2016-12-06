@@ -1,0 +1,1 @@
+include ':android-kit-demo', ':android-kit-lib'
