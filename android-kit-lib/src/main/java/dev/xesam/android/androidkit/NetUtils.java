@@ -12,7 +12,7 @@ import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
-public final class NetworkUtils {
+public final class NetUtils {
     public static final String TAG = "NetworkHelper";
 
     /**
