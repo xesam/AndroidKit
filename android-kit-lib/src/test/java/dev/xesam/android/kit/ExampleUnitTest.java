@@ -1,4 +1,4 @@
-package dev.xesam.android.androidkit;
+package dev.xesam.android.kit;
 
 import org.junit.Test;
 
