@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import java.security.MessageDigest;
 
 /**
- * 获取 App 包相关的细心
+ * 获取 App 包相关的信息
  * <p>
  * Created by xesamguo@gmail.com on 11/17/15.
  */
