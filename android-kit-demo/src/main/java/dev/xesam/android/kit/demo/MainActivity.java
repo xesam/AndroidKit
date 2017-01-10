@@ -3,6 +3,8 @@ package dev.xesam.android.kit.demo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import dev.xesam.android.androidkit.demo.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
