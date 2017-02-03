@@ -27,7 +27,7 @@ public final class SettingUtils {
      */
     public static void toGpsSetting(Context context) {
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-        context.startActivity(intent);
+        ActivityUtils.startActivity(context, intent);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SettingUtils {
      */
     public static void toWifiSetting(Context context) {
         Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
-        context.startActivity(intent);
+        ActivityUtils.startActivity(context, intent);
     }
 
     /**
@@ -63,14 +63,6 @@ public final class SettingUtils {
             e.printStackTrace();
         }
         return false;
-    }
-
-    public static boolean enableWifi(Context context) {
-        return setWifiEnable(context, true);
-    }
-
-    public static boolean disableWifi(Context context) {
-        return setWifiEnable(context, false);
     }
 
     /**
