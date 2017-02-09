@@ -27,7 +27,7 @@ public final class SettingUtils {
      */
     public static void toGpsSetting(Context context) {
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-        ActivityUtils.startActivity(context, intent);
+        AndroidUtils.startActivity(context, intent);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SettingUtils {
      */
     public static void toWifiSetting(Context context) {
         Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
-        ActivityUtils.startActivity(context, intent);
+        AndroidUtils.startActivity(context, intent);
     }
 
     /**

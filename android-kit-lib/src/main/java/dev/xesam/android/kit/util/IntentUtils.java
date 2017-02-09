@@ -22,7 +22,7 @@ public class IntentUtils {
         Uri uri = Uri.parse("smsto:" + phoneNumber);
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         intent.putExtra("sms_body", smsContent);
-        ActivityUtils.startActivity(context, intent);
+        AndroidUtils.startActivity(context, intent);
     }
 
     /**
@@ -37,6 +37,6 @@ public class IntentUtils {
         }
         Uri uri = Uri.parse("tel:" + phoneNumber);
         Intent intent = new Intent(Intent.ACTION_CALL, uri);
-        ActivityUtils.startActivity(context, intent);
+        AndroidUtils.startActivity(context, intent);
     }
 }
