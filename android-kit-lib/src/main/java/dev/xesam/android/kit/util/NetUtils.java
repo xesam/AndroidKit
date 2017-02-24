@@ -107,7 +107,8 @@ public final class NetUtils {
      */
     @Nullable
     public static NetworkInfo getNetworkInfo(Context context) {
-        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        //6.0 内存泄漏
+        ConnectivityManager manager = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         return manager.getActiveNetworkInfo();
     }
 
@@ -178,7 +179,7 @@ public final class NetUtils {
      * 获取运营商
      */
     public static int getSimProvider(Context context) {
-        TelephonyManager telMgr = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telMgr = (TelephonyManager) context.getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
         if (telMgr.getSimState() == TelephonyManager.SIM_STATE_READY) {
             String provider = telMgr.getSimOperator();
             if (provider == null || TextUtils.isEmpty(provider)) {
