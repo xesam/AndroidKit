@@ -10,7 +10,7 @@ public final class HandlerUtils {
     private HandlerUtils() {
     }
 
-    public static Handler getMainHandler() {
+    private static Handler getMainHandler() {
         return new Handler(Looper.getMainLooper());
     }
 

@@ -1,5 +1,6 @@
 package dev.xesam.android.kit.util;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
@@ -55,5 +56,19 @@ public final class StorageUtils {
         long availableBlocks = stat.getAvailableBlocks();
         return Formatter.formatFileSize(context, blockSize * availableBlocks);
 
+    }
+
+    /**
+     * 获取设备的可用内存大小
+     *
+     * @param context 应用上下文对象context
+     * @return 当前内存大小
+     */
+    public static int getDeviceUsableMemory(Context context) {
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
+        am.getMemoryInfo(mi);
+        // 返回当前系统的可用内存
+        return (int) (mi.availMem / (1024 * 1024));
     }
 }

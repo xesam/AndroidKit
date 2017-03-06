@@ -36,7 +36,7 @@ public final class SettingUtils {
     public static boolean isWifiEnabled(Context context) {
         boolean enabled = false;
         try {
-            WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+            WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             enabled = wifiManager.isWifiEnabled();
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public final class SettingUtils {
      */
     public static boolean setWifiEnable(Context context, boolean enable) {
         try {
-            WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+            WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             return wifiManager.setWifiEnabled(enable);
         } catch (Exception e) {
             e.printStackTrace();
