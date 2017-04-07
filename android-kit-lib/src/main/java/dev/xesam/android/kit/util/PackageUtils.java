@@ -74,7 +74,7 @@ public final class PackageUtils {
             PackageManager pm = context.getPackageManager();
             PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
 
-            if (TextUtils.isEmpty(pi.versionName)) {
+            if (!TextUtils.isEmpty(pi.versionName)) {
                 version.versionName = pi.versionName;
             }
             version.versioncode = pi.versionCode;
